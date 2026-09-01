@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐔 Chicken Road Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐔 Chicken Road</h1>
+            <div class="info">
+                <div class="score">
+                    <span class="label">স্কোর:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="level">
+                    <span class="label">লেভেল:</span>
+                    <span id="level">1</span>
+                </div>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+
+        <div class="controls">
+            <button id="upBtn" class="btn">⬆️ উপরে</button>
+            <div class="keyboard-info">
+                ⌨️ Arrow Up বা ক্লিক করুন
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>📋 নিয়ম:</h3>
+            <ul>
+                <li>⬆️ মুরগিকে উপরে নিয়ে যান</li>
+                <li>🚗 লাল গাড়ি এড়িয়ে চলুন</li>
+                <li>🎯 সবুজ এলাকায় পৌঁছান</li>
+                <li>📈 প্রতিটি লেভেল কঠিন হবে</li>
+            </ul>
+        </div>
+
+        <div id="gameOver" class="modal">
+            <div class="modal-content">
+                <h2>গেম শেষ! 💥</h2>
+                <p id="gameOverMsg"></p>
+                <button onclick="restartGame()">আবার খেলুন 🔄</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
